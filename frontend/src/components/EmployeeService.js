@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/api/v1/employees";
+const EMPLOYEE_API_BASE_URL = "https://employee-management-system-production-34d6.up.railway.app/api/v1/employees";
+//http://localhost:8080/api/v1/employees
 
 class EmployeeService {
     getEmployees() {
@@ -16,13 +17,13 @@ class EmployeeService {
     }
 
     updateEmployee(id, employee) {
-        return axios.put(`http://localhost:8080/api/v1/employees/${id}`, employee);
+        return axios.put(`https://employee-management-system-production-34d6.up.railway.app/api/v1/employees/${id}`, employee);
     }
 
 
 
     deleteEmployee(employeeId) {
-        return axios.delete(`${EMPLOYEE_API_BASE_URL}/${employeeId}`);
+        return axios.delete(`https://employee-management-system-production-34d6.up.railway.app/api/v1/employees/${employeeId}`);
     }
 }
 
