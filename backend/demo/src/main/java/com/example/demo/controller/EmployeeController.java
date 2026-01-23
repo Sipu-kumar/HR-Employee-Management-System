@@ -8,13 +8,19 @@ import org.springframework.web.bind.annotation.*;
 
 import com.example.demo.model.Employee;
 import com.example.demo.repository.EmployeeRepository;
-
+// local host project
 // @CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
+// ✔️ Only this ONE frontend can call your backend
 @CrossOrigin(
-    origins = "*",
-    allowedHeaders = "*",
-    methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}
+  origins = "https://employee-management-system-k244.vercel.app",
+  methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}
 )
+// What does * mean in CORS?  The * (asterisk) means “ALLOW ALL”.
+// @CrossOrigin(
+//     origins = "*",
+//     allowedHeaders = "*",
+//     methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE}
+// )
 
 @RestController
 @RequestMapping("/api/v1")
