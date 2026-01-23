@@ -10,7 +10,7 @@ A full-stack Employee Management System built with:
 
 ## 🚀 How to Run
 
-### 1️⃣ Backend (Spring Boot + PostgreSQL)
+### 1️⃣ Backend (Spring Boot + PostgreSQL + Railway For deployment )
 
 1. Navigate to the backend folder:
    ```bash
@@ -22,21 +22,17 @@ Create a database in PostgreSQL (example: ems_db)
 
 Update your application.properties (located in backend/src/main/resources/) with your DB details:
 
-spring.datasource.url=jdbc:postgresql://localhost:5432/ems_db
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+inside Add the Railway Variables on The Application.properties You can see in github...and railway website also...
 
 3. Run the backend:
 
 mvn spring-boot:run
 
 
-4. The backend will start on:
+4. The backend will live on:
 
-    http://localhost:8080
+     https://employee-management-system-production-34d6.up.railway.app/api/v1/employees
+    
 
 2️⃣ Frontend (React)
 
