@@ -28,4 +28,6 @@ class EmployeeService {
   }
 }
 
-export default new EmployeeService();
+// ✅ FIX: assign instance to variable before export
+const employeeService = new EmployeeService();
+export default employeeService;
