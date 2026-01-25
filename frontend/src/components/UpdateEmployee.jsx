@@ -24,7 +24,7 @@ function UpdateEmployee() {
   };
 
   return (
-    <div className="container mt-5">
+    <div className="main-container mt-5">
       <h2 className="text-center">Update Employee</h2>
       <form onSubmit={update}>
         <div className="mb-3">
@@ -38,6 +38,14 @@ function UpdateEmployee() {
         <div className="mb-3">
           <label>Email Id</label>
           <input type="email" name="emailId" className="form-control" value={employee.emailId} onChange={handleChange} required />
+        </div>
+        <div className="mb-3">
+          <label>Mobile Number</label>
+          <input type="text" name="mobileNumber" className="form-control" value={employee.mobileNumber || ''} onChange={handleChange} required />
+        </div>
+        <div className="mb-3">
+          <label>Salary</label>
+          <input type="number" name="salary" className="form-control" value={employee.salary || ''} onChange={handleChange} required />
         </div>
         <button className="btn btn-primary" type="submit">Update</button>
       </form>

@@ -11,6 +11,8 @@ import com.example.demo.model.Employee;
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 	List<Employee> findAll();
+    
+    List<Employee> findByCompanyName(String companyName);
 
 	Employee save(Employee employee);
 

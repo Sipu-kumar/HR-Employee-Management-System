@@ -30,7 +30,8 @@ body {
 }
 
 /* Main Container */
-.container {
+/* Main Container */
+.main-container {
   background-color: #ffffff;
   color: #000000;
   padding: 30px;
@@ -41,7 +42,8 @@ body {
 }
 
 /* Headings */
-h2, h4 {
+h2,
+h4 {
   color: #0f2c5d;
   font-weight: bold;
   text-align: center;
@@ -60,7 +62,8 @@ table {
   color: #ffffff;
 }
 
-.table th, .table td {
+.table th,
+.table td {
   padding: 12px;
   border: 1px solid #dddddd;
 }
@@ -105,7 +108,7 @@ table {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .container {
+  .main-container {
     padding: 20px;
     margin: 20px 10px 100px 10px;
   }
@@ -119,7 +122,12 @@ table {
     font-size: 0.9rem;
   }
 
-  table, thead, tbody, th, td, tr {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
     font-size: 0.9rem;
   }
 }
