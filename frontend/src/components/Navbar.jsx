@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import AuthService from './AuthService';
 
 function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const user = AuthService.getCurrentUser();
 
   const handleLogout = () => {
@@ -24,7 +25,7 @@ function Navbar() {
 
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-              {!user ? (
+              {!user || location.pathname === '/login' ? (
                 <>
                   <li className="nav-item">
                     <Link className="nav-link fw-bold" to="/login">Login</Link>
@@ -49,7 +50,7 @@ function Navbar() {
       </nav>
 
       {/* Sub Header: Blue Background (Only shown if logged in) */}
-      {user && (
+      {user && location.pathname !== '/login' && (
         <div className="bg-primary py-3 text-white">
           <div className="container d-flex justify-content-between align-items-center">
             <h5 className="mb-0">My Company Employee List</h5>
