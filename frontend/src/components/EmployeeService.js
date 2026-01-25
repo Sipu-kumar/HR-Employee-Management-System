@@ -2,7 +2,7 @@ import axios from "axios";
 import authService from "./AuthService";
 
 // ✅ Use environment variable (Vercel friendly)
-const EMPLOYEE_API_BASE_URL = `${process.env.REACT_APP_API_URL || "http://localhost:8080/api/v1"}/employees`;
+const EMPLOYEE_API_BASE_URL = `${process.env.REACT_APP_API_URL || "http://192.168.0.102:8080/api/v1"}/employees`;
 // const EMPLOYEE_API_BASE_URL = "https://employee-management-system-production-34d6.up.railway.app/api/v1/employees";
 // //http://localhost:8080/api/v1/employees
 
