@@ -68,11 +68,7 @@ const Login = () => {
                             Login
                         </button>
 
-                        <div className="text-center mt-3">
-                            <div className="alert alert-success d-flex align-items-center justify-content-center p-2 mt-3" role="alert" style={{ fontSize: "0.9rem" }}>
-                                <i className="bi bi-check-circle-fill me-2"></i> Login successful! (Demo UI)
-                            </div>
-                        </div>
+
 
                         <div className="mt-4 text-center">
                             <Link to="/register" style={{ textDecoration: 'none' }}>Don't have an account? Register</Link>

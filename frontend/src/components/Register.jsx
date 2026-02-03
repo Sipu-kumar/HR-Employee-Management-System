@@ -48,7 +48,7 @@ const Register = () => {
             if (err.response && err.response.data && err.response.data.error) {
                 setError(err.response.data.error);
             } else {
-                setError("Registration failed. Try again.");
+                setError(err.message || "Registration failed. Try again.");
             }
             setMessage("");
         }
