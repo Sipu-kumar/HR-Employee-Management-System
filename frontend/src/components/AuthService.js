@@ -4,7 +4,8 @@ import axios from "axios";
 // If REACT_APP_API_URL is set to /api/v1, we need to adjust or just hardcode for valid dev flow if needed.
 // Ideally usage: process.env.REACT_APP_API_URL.replace('/v1', '/auth') or similar if strict.
 // For now, let's try to infer or use standard localhost for safety.
-const API_URL = "http://192.168.0.102:8080/api/auth/";
+// Use environment variable for API URL, fallback to localhost for development
+const API_URL = (process.env.REACT_APP_API_URL || "http://localhost:8080") + "/api/auth/";
 
 class AuthService {
     login(username, password) {
