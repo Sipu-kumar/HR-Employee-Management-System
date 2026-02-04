@@ -1,3 +1,8 @@
+## 🎥 Project Video
+https://github.com/user-attachments/assets/26511076-b382-4b05-a655-9c1b178e4b6c
+
+
+
 # Employee Management System
 
 A full-stack Employee Management System built with:
